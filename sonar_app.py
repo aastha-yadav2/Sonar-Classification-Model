@@ -23,9 +23,9 @@ def set_background_gif_from_url(gif_url):
 gif_url = "https://cdn.dribbble.com/users/568/screenshots/2937224/browserpreview_tmp.gif"
 set_background_gif_from_url(gif_url)
 
-# Load trained model
-with open('sonar_model.pkl', 'rb') as file:
-    model = pickle.load(file)
+# Load model
+model = joblib.load('sonar_model.joblib')
+
 
 # App title and layout
 st.set_page_config(page_title="Sonar Signal Classifier", layout="centered")
@@ -77,4 +77,5 @@ elif mode == "🔹 Enter Manually (60 Fields)":
         prediction = model.predict(input_array)[0]
         result = "🪨 Rock" if prediction == 'R' else "💣 Mine"
         st.success(f"✅ **Prediction:** {result}")
+
 
