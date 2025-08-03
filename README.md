@@ -26,7 +26,7 @@ This project includes:
 - The model is trained on the **Sonar Dataset** from the UCI Repository.
 - The dataset file is included in the repo.
 
-📂 [`sonar.csv`](./sonar.csv)
+📂 [`sonar_data.csv`](./sonar_data.csv)
 
 ---
 
